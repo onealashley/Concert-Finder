@@ -16,16 +16,18 @@
         </form>
     </div> 
 
+    <div class="event-view"></div>
+
     <script type="text/javascript">
     
     function displayConcert(location) {
-        var queryUrl = "http://api.eventful.com/json/events/search?keywords=music&location=" + location + "&cors_filter=1&app_key=FFR9NRDxgF32bNs5";
+        var queryUrl = "https://api.eventful.com/json/events/search?keywords=music&location=" + location + "&cors_filter=1&app_key=FFR9NRDxgF32bNs5";
 
         $.ajax({
             url: queryUrl,
             method: "GET"
         }).then(function(response) {
-            var results = response.data;
+            var results = response;
             console.log(results);
         });
     }
