@@ -2,8 +2,6 @@
 <html>
 <head>
     <title>Concert Finder</title>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
 
@@ -16,29 +14,9 @@
         </form>
     </div> 
 
-    <div class="event-view"></div>
+    <div id="event-view"></div>
 
-    <script type="text/javascript">
-    
-    function displayConcert(location) {
-        var queryUrl = "https://api.eventful.com/json/events/search?keywords=music&location=" + location + "&cors_filter=1&app_key=FFR9NRDxgF32bNs5";
-
-        $.ajax({
-            url: queryUrl,
-            method: "GET"
-        }).then(function(response) {
-            var results = response;
-            console.log(results);
-        });
-    }
-
-    $("#search-location").on("click", function(event){
-        event.preventDefault();
-        var inputLocation = $("#location-input").val().trim();
-        displayConcert(inputLocation);
-    })
-
-    </script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
 
 </body>
 
