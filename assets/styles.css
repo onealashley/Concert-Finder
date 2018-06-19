@@ -1,0 +1,20 @@
+.col-sm-3 {
+    border-right: 2px solid #ccc;
+    padding: 10px;
+}
+
+.container1 {
+    background-color: black;
+    color: white;
+}
+
+.events {
+    border: 2px solid #ccc;
+    padding: 20px;
+}
+
+.date {
+    border: 1px solid #ccc;
+    font-size: 3em;
+    padding: 5px;
+}
