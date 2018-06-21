@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>google api test</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/styles.css">
+    </head>
+    <body>
+        <a href=""><h1>linkz</h1></a>
+        
+        <script>
+            //AIzaSyDWeL-Vl1ixwYme3CsCloG4KGPbod3Yx_c
+            $.ajax({
+                url:'https://www.googleapis.com/customsearch/v1?key=AIzaSyDWeL-Vl1ixwYme3CsCloG4KGPbod3Yx_c&cx=002724992046672505104:qt0x3gyeaes&q=red+not+chili+peppers',
+                method:'GET'
+            }).then(function(response){
+                console.log(response);
+                $('a').attr('href', 'https://' + response.items[0].formattedUrl
+)
+            })
+            
+
+        </script>
+    </body>
+</html>
