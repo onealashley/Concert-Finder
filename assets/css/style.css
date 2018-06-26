@@ -2,6 +2,7 @@ body {
     background-image:url("../images/concert-image.jpg");
     height: 100%;
     width: 100%;
+    font-family: 'Shrikhand', cursive;
 }
 
 h1 {
