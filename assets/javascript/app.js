@@ -58,7 +58,7 @@ function iTunes(callback){
     console.log(performers);
     performers = performers.replace(/ /g,"+");
     console.log(performers);
-    var queryUrl2 = "https://itunes.apple.com/search?term=" + performers + "&entity=allArtist&attribute=allArtistTerm";
+    var queryUrl2 = "https://cors-anywhere.herokuapp.com/" + "itunes.apple.com/search?term=" + performers + "&entity=allArtist&attribute=allArtistTerm";
     console.log(queryUrl2);
 
     $.ajax ({

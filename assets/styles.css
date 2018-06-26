@@ -9,6 +9,14 @@ body {
     margin-top: -160px;
 }
 
+.jumbotron{
+    background-image: url("../assets/concert-image.jpg") ;
+    background-size: cover; 
+    height: 100%;
+    width: 100%;
+}
+
+
 .container1 {
     background-color: black;
     color: white;
