@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var venueId 
 var title
 var performer = [];
@@ -6,13 +5,6 @@ var performers
 
 function displayConcert(location) {
     var queryUrl = "https://api.eventful.com/json/events/search?location=" + location + "&keywords=has_performers:1&tag=music&cors_filter=1&t=this+month&c=music&app_key=FFR9NRDxgF32bNs5";
-=======
-var title;
-
-function displayConcert(location) {
-    var queryUrl = "https://api.eventful.com/json/events/search?location=" + location + "&tag=music&cors_filter=1&t=this+month&c=music&app_key=FFR9NRDxgF32bNs5";
-    
->>>>>>> 1ce3d524b6ed070e65fce21edd6e462328c859c1
 
     $.ajax({
         url: queryUrl,
@@ -22,33 +14,11 @@ function displayConcert(location) {
     }).then(function(response) {
         console.log(response.events);
         for (i = 0; i < response.events.event.length; i++) {
-<<<<<<< HEAD
             updateDomWithEvent(response.events.event[i]);
-=======
-            console.log(response.events.event[i]);
-            var concertInfo = $("<div class=events>");
-            title = $("<p id = artist>").text(response.events.event[i].title);
-            // $("#artist").click(function());
-            var venue = $("<p id = venue>").text(response.events.event[i].venue_name);
-            // $("#venue").click(funtcion());
-            var address = $("<p>").text(response.events.event[i].venue_address);
-            var parsedDate = $("<div class=date>").append(moment(response.events.event[i].start_time).format('Do MMM'));
-            concertInfo.append(title).append(venue).append(address);
-            var button = $('<button>').text('More Info')
-            var link = $('<a>').attr('href', response.events.event[i].url)
-            link.append(button);
-            button.addClass('btn btn-lg');
-            $("#event-view").append(parsedDate).append(concertInfo);
-            concertInfo.append(link);
-             
-            //googleSearch();
-            
->>>>>>> 1ce3d524b6ed070e65fce21edd6e462328c859c1
         }
     });
 }
 
-<<<<<<< HEAD
 
 function updateDomWithEvent(event) {
     console.log(event);
@@ -106,24 +76,6 @@ function iTunes(callback){
         callback(bandLink);
     });
 }
-=======
-// function googleSearch(){
-//     $.ajax({
-//         url:'https://www.googleapis.com/customsearch/v1?key=AIzaSyDWeL-Vl1ixwYme3CsCloG4KGPbod3Yx_c&cx=002724992046672505104:qt0x3gyeaes&q='+title.text(),
-//         method:'GET'
-//     }).then(function(response){
-//         console.log(title.text());
-//         console.log(response.items[0].formattedUrl);
-//         for (i = 0; i < $('.events'); i++){
-//         var button = $('<button>').text($('More Info').text);
-//         $('.events').append(button); 
-//     }            
-//     })
-// }
-
-    //AIzaSyDWeL-Vl1ixwYme3CsCloG4KGPbod3Yx_c
-
->>>>>>> 1ce3d524b6ed070e65fce21edd6e462328c859c1
 
 
 
