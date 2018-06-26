@@ -55,7 +55,7 @@ function updateDomWithEvent(event) {
     var mapLink = $('<a>').attr('href', "http://www.google.com/maps/place/" + latitude + "," + longitude).attr('target','_blank');
     mapLink.append(mapButton);
     mapButton.addClass('btn btn-lg');
-    var button = $('<button>').text('More Info')
+    var button = $('<button>').text('Event Info')
     var link = $('<a>').attr('href', event.url).attr('target','_blank');
     link.append(button);
     button.addClass('btn btn-lg');
