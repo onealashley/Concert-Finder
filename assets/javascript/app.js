@@ -3,6 +3,12 @@ var title
 var performer = [];
 var performers
 
+document.body.className += ' fade-out';
+$(function() {
+    $('body').removeClass('fade-out');
+});
+
+
 function displayConcert(location) {
     var queryUrl = "https://api.eventful.com/json/events/search?location=" + location + "&keywords=has_performers:1&tag=music&cors_filter=1&t=this+month&c=music&app_key=FFR9NRDxgF32bNs5";
 
