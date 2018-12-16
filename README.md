@@ -1,11 +1,7 @@
-Title: Concert Finder
+# Concert Finder
 
-Team Members: Calvin, Ashley, Denina, Chris
+This app will allow you to search for local concerts by city using the Eventful API. 
 
-App to find local concerts and artits by name and venue
+It the will offer Google maps links to the venue, a link to buy tickets, and a link to the artist's Itunes page if they have one.
 
-We will use the you tube api to bring up videosof muscicians and use the songkick api to find the concerts by venue
-
-We need to design a U/I 
-We need to creat a database to store searches
-We need to use the api to pull search results from the U/I
+Try it out: 
